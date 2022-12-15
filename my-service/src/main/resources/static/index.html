@@ -12,10 +12,8 @@
     <meta name="robots" content="max-image-preview:large">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
 <link rel="dns-prefetch" href="https://www.yczuoxin.com/">
-<style id="global-styles-inline-css" type="text/css">
-</style>
+<style id="global-styles-inline-css" type="text/css"></style>
 <style id="md-style-inline-css" type="text/css">
- 
     .footer{
         position: absolute;
         bottom: 10px;
@@ -45,4 +43,18 @@
   
     </div>
     </body>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script >
+
+    console.log(axios)
+    axios({
+        method: 'get',
+        url: 'http://localhost/demo/default/1',
+
+    })
+        .then(function (response) {
+            console.log('')
+        });
+</script>
 </html>
