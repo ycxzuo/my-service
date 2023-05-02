@@ -9,6 +9,9 @@ spring:
     username: zuoxin
     password: root
 
+web:
+  aaa: 123
+
 # logger config
 logging:
   level:
