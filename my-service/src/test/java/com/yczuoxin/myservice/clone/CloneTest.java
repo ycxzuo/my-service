@@ -1,6 +1,6 @@
 package com.yczuoxin.myservice.clone;
 
-import cn.hutool.core.lang.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class CloneTest {
@@ -11,7 +11,7 @@ class CloneTest {
         entity.arr = new int[]{1, 2, 3};
         CloneEntity clone = entity.clone();
         clone.arr[1] = 4;
-        Assert.equals(entity.arr[1], 2);
+        Assertions.assertEquals(2, entity.arr[1]);
     }
 
 }
