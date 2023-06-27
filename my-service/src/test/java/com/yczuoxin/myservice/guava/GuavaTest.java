@@ -1,4 +1,4 @@
-package com.yczuoxin.myservice;
+package com.yczuoxin.myservice.guava;
 
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Test;
