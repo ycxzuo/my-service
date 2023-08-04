@@ -14,8 +14,7 @@ public class DemoServiceImpl implements DemoService {
     private DemoRepository demoRepository;
 
     @Override
-    public String getDefaultData(Long id) {
-        Info info = demoRepository.selectById(id);
-        return info == null ? "":info.getValue();
+    public Info getDefaultData(Long id) {
+        return demoRepository.selectOneWithRelationsById(id);
     }
 }

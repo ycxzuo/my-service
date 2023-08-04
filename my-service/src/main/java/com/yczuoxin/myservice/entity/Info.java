@@ -1,18 +1,22 @@
 package com.yczuoxin.myservice.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.mybatisflex.annotation.Id;
+import com.mybatisflex.annotation.RelationOneToOne;
+import com.mybatisflex.annotation.Table;
 import lombok.Data;
 
-@TableName("INFO")
+@Table("INFO")
 @Data
 public class Info {
 
-    @TableId
+    @Id
     private Long id;
 
     private String value;
 
     private String description;
+
+    @RelationOneToOne(selfField = "id", targetField = "infoId")
+    private InfoDetail infoDetail;
 
 }

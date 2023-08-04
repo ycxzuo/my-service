@@ -1,5 +1,7 @@
 package com.yczuoxin.myservice.service;
 
+import com.yczuoxin.myservice.entity.Info;
+
 /**
  * 示例 Service
  *
@@ -13,6 +15,6 @@ public interface DemoService {
      * @param id    码表 id
      * @return
      */
-    String getDefaultData(Long id);
+    Info getDefaultData(Long id);
 
 }

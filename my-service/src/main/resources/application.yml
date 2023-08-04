@@ -4,8 +4,8 @@ server:
 spring:
   # database config
   datasource:
-    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
-    url: jdbc:p6spy:mysql://8.129.222.205:3306/yczuoxin
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://8.129.222.205:3306/yczuoxin
     username: zuoxin
     password: root
 
@@ -16,3 +16,7 @@ web:
 logging:
   level:
     com.baomidou.mybatisplus.samples: debug
+
+processor:
+  mapper:
+    generateEnable: true

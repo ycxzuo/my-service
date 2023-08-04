@@ -54,7 +54,7 @@ public class ConstructTest {
 
 
     List<Apple> make(List<Integer> list, Function<Integer, Apple> function) {
-        return list.stream().map(weight -> function.apply(weight)).collect(Collectors.toList());
+        return list.stream().map(function).collect(Collectors.toList());
     }
 
 }

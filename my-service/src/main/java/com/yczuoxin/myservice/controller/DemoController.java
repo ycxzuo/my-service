@@ -4,6 +4,7 @@ import cn.hutool.db.DbUtil;
 import cn.hutool.db.Entity;
 import com.yczuoxin.myservice.bean.DemoBean;
 import com.yczuoxin.myservice.dto.ResponseResult;
+import com.yczuoxin.myservice.entity.Info;
 import com.yczuoxin.myservice.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +29,12 @@ public class DemoController {
     private DemoBean demoBean;
 
     @GetMapping("/default/{id}")
-    public ResponseResult<String> getDefaultMessage(@PathVariable Long id) {
+    public ResponseResult<Info> getDefaultMessage(@PathVariable Long id) {
         return ResponseResult.success(demoService.getDefaultData(id));
     }
 
     @GetMapping("/hutool/{id}")
-    public ResponseResult<String> getHutoolMessage(@PathVariable Long id) throws SQLException {
+    public ResponseResult<Info> getHutoolMessage(@PathVariable Long id) throws SQLException {
         List<Entity> entities = DbUtil.use().query("select * from INFO where id = " + id);
         for (Entity entity : entities) {
             System.out.println(entity);
