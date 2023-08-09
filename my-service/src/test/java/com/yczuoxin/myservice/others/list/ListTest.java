@@ -1,4 +1,4 @@
-package com.yczuoxin.myservice.others;
+package com.yczuoxin.myservice.others.list;
 
 import com.yczuoxin.myservice.entity.Info;
 import org.junit.jupiter.api.Assertions;
@@ -22,15 +22,15 @@ class ListTest {
     @Test
     void removeRangeTest2() {
         Info info1 = new Info();
-        info1.setId(1l);
+        info1.setId(1L);
         info1.setValue("aaa");
         Info info2 = new Info();
-        info2.setId(2l);
+        info2.setId(2L);
         info2.setValue("bbb");
         Info info3 = new Info();
-        info3.setId(3l);
+        info3.setId(3L);
         info3.setValue("ccc");
-        List<Info> list = Arrays.asList(new Info());
+        List<Info> list = Arrays.asList(info1, info2, info3);
         // subList 操作的是原 List
         List<Info> integers = list.subList(0, 4);
         integers.clear();
