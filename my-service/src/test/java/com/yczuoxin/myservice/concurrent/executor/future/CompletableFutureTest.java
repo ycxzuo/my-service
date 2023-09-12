@@ -8,6 +8,11 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
+/**
+ * CompletableFuture 与 Stream 并行流的区别：
+ *  completableFuture 可以自定义线程池
+ *  Stream 使用的默认的 ForkJoinPool，核心线程数跟CPU核心数有关，不能自定义
+ */
 class CompletableFutureTest {
 
     SecureRandom secureRandom = new SecureRandom();
