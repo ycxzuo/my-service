@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class AppleTest {
+class AppleTest {
 
     private int x = 0;
 

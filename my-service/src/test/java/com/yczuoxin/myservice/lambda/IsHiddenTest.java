@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.FileFilter;
 
-public class IsHiddenTest {
+class IsHiddenTest {
 
     void lambda1() {
         File[] hiddenFiles = new File(".").listFiles(new FileFilter() {

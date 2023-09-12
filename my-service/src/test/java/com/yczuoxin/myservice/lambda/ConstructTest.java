@@ -11,7 +11,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class ConstructTest {
+class ConstructTest {
 
     @Test
     void construct(){
